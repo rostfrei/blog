@@ -71,4 +71,28 @@ and default editor opens up with global config contens
         gpgsign = true
 ```
 
+We can list current global git config
+```
+git config --global --list
+user.name=Marko Kukovec
+user.email=email@email.com
+user.signingkey=8237B754E4BDCC932D66405DE62D3DC3D002D1B7
+core.excludesfile=/Users/markokukovec/.gitignore_global
+difftool.sourcetree.cmd=opendiff "$LOCAL" "$REMOTE"
+difftool.sourcetree.path=
+mergetool.sourcetree.cmd=/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh "$LOCAL" "$REMOTE" -ancestor "$BASE" -merge "$MERGED"
+mergetool.sourcetree.trustexitcode=true
+commit.template=/Users/markokukovec/.stCommitMsg
+commit.gpgsign=true
+```
+
 We are ready for Github GPG signing!
+
+Sign commit. Popup requesting `User PIN` will show up.
+```
+git commit -S -m "Added two howto documents."
+[main 08b479b] Added two howto documents.
+ 2 files changed, 386 insertions(+)
+ create mode 100644 Yubikey GPG Github signing.md
+ create mode 100644 Yubikey GPG.md
+ ```
