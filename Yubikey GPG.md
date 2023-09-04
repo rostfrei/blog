@@ -2,7 +2,7 @@
 
 Install needed packages
 ```
-$ brew install ykman yubico-piv-tool gnupg pinentry-mac
+$ brew install ykman yubico-piv-tool gnupg2 pinentry-mac
 ```
 
 Insert key into USB C slot and start editing `card`
